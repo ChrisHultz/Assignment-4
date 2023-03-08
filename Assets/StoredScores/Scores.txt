@@ -1,0 +1,10 @@
+Chris,2000
+Chris,1000
+Player,500
+Chris,400
+Rick,300
+Chris,200
+AAA,0
+AAA,0
+AAA,0
+AAA,0
