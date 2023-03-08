@@ -17,7 +17,10 @@ public class Frog : MonoBehaviour {
 	public GameObject objectToDisable;
 	public GameObject objectToDisable2;
 	private int count;
-	
+	private int down = 0;
+	private int up = 8;
+	private int left = 8;
+	private int right = 8;
 
 	void Start() {
 		livesTxt.text = "Lives: " + lives.ToString();
@@ -25,13 +28,45 @@ public class Frog : MonoBehaviour {
 
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.RightArrow))
-			rb.MovePosition(rb.position + Vector2.right);
+			if (right > 0) {
+				rb.MovePosition(rb.position + Vector2.right);
+				right--;
+				left++;
+			}
+			else {
+				right = 0;
+				Debug.Log("Tried to move too far!");
+			}
 		else if (Input.GetKeyDown(KeyCode.LeftArrow))
-			rb.MovePosition(rb.position + Vector2.left);
+			if (left > 0) {
+				rb.MovePosition(rb.position + Vector2.left);
+				left--;
+				right++;
+			}
+			else{
+				left = 0;
+				Debug.Log("Tried to move too far!");
+			}
 		else if (Input.GetKeyDown(KeyCode.UpArrow))
-			rb.MovePosition(rb.position + Vector2.up);
+			if (up > 0){
+				rb.MovePosition(rb.position + Vector2.up);
+				up--;
+				down++;
+			}
+			else{
+				up = 0;
+				Debug.Log("Tried to move too far!");
+			}
 		else if (Input.GetKeyDown(KeyCode.DownArrow))
-			rb.MovePosition(rb.position + Vector2.down);
+			if (down > 0){
+				rb.MovePosition(rb.position + Vector2.down);
+				down--;
+				up++;
+			}
+			else {
+				down = 0;
+				Debug.Log("Tried to move too far!");
+			}
 	}
 
 	void OnTriggerEnter2D (Collider2D col) {

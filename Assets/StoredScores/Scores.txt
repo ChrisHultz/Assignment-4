@@ -1,10 +1,10 @@
 Chris,2000
+Player,1900
+test,1500
 Chris,1000
+Zach,1000
+Player,700
+Player,500
+Player,500
 Player,500
 Chris,400
-Rick,300
-Chris,200
-AAA,0
-AAA,0
-AAA,0
-AAA,0
