@@ -18,7 +18,7 @@ public class Settings : MonoBehaviour {
     }
 
     public void calcAddedSpawnSpeed() {
-        spawnSpeedTxt.text = "Spawn Speed: " + spawnSpeedSlider.value.ToString();
+        spawnSpeedTxt.text = "Spawn Speed: " + spawnSpeedSlider.value.ToString("F2");
         addedSpawn = spawnSpeedSlider.value;
     }
 

@@ -3,8 +3,8 @@ Player,1900
 test,1500
 Chris,1000
 Zach,1000
+Player,1000
+Player,900
+Player,700
 Player,700
 Player,500
-Player,500
-Player,500
-Chris,400
